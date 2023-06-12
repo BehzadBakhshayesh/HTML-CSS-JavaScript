@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideshow</title>
+    <style>
+       
+        .container{padding: 0px;
+            width: 800px;
+            height: auto ;
+            margin: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            position: relative;}
+
+        .container .slide{ 
+            display: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            animation: fade 0.5s ease;}
+
+        @keyframes fade {
+            from{opacity: 0.7;}
+            to{opacity: 1;}}
+
+         .slide.active{display: block;}
+
+        .container .slide img{width: 100%;
+         height: auto;
+         border-radius: 5px;
+          display: flex;}
+
+       .container .slide #text{
+           width: 500px;
+           height: 100px;
+           background-color: rgba(255,255,255,0.25);
+           color: #fff;
+            margin: auto;
+            line-height: 100px;
+            text-align: center;
+            font-size: 36px;
+            text-shadow: 1px 1px 3px #ccc;
+            font-weight: bold;
+            position: absolute;
+           bottom: 10%;
+           left: 50%;
+           transform: translate(-50%,0);
+       }
+       .click{position: absolute;
+                top: 50%;
+                transform: translate(0,-50%);
+                color: #ccc;
+                font-size: 30px; 
+                cursor: pointer;}
+
+        #next{right: 10px;}
+        #prev{left: 10px;}
+
+        .click:hover{color: #fff;}
+
+        .dots{
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+           transform: translate(-50%,0);
+            display: flex;}
+
+       
+        .deactive{
+            width: 20px;
+            height: 5px;
+            margin-left: 3px;
+            background-color: #fff;
+        }
+        .activecolor{
+            background-color: #eeaaff;
+        }
+      
+       
+    </style>
+</head>
+<body>
+    
+        <div class="container" id="container">
+
+            <div class="slide active">
+                <img src="image/1.jpg" alt="slid1">  
+                <div id="text">slide1</div>
+            </div>
+    
+            <div class="slide">
+                <img src="image/2.jpg" alt="slid2">  
+                <div id="text">slide2</div>
+            </div>
+    
+            <div class="slide">
+                <img src="image/3.jpg" alt="slid3">  
+                <div id="text">slide3</div>
+            </div> 
+
+        
+            <div class="dots" id="dots"></div>
+
+            <div class="click" id="prev">&#10094</div>
+            <div  class="click" id="next">&#10095</div>
+            
+
+        </div> 
+
+    <script>
+
+/*******************variables***************************/
+
+        const prev = document.getElementById("prev");
+        const next = document.getElementById("next");
+        const slides = document.querySelectorAll(".slide");
+        const container = document.getElementById("container");
+        const dots = document.getElementById("dots");
+        var j = 0;
+
+
+/* *******************creat dot************************ */
+        
+        for(let n = 0; n < slides.length ; n++){
+        var createDot = document.createElement("span");
+        var att1 = createDot.className = 'deactive';
+            dots.appendChild(createDot);
+        }
+       const createdDots = dots.querySelectorAll(".deactive");
+        createdDots[0].classList.add("activecolor")
+        
+ /* *****************timer************************** */
+     let timer = setInterval(slide.bind(null, 1), 3000); 
+
+ container.onmouseover=function(){
+        clearInterval(timer)
+     }
+
+ container.onmouseout=function(){
+        timer = setInterval(slide.bind(null, 1),3000); 
+     } 
+ 
+/*********************add evevts****************************/    
+
+        next.addEventListener("click", slide.bind(null, 1));
+        prev.addEventListener('click', slide.bind(null, -1));
+
+        function slide(parameter){
+
+            slides[j].style.display="none"; 
+            createdDots[j].classList.toggle("activecolor");
+            
+            
+            j = j + parameter;
+            
+            j > slides.length - 1 ? j = 0 : j;
+            if(parameter === 1) {
+                slides[j].style.display = "block"; 
+                createdDots[j].classList.add("activecolor");
+                createdDots[j].backgroundColor = "#fff"
+            }
+
+            j < 0 ? j = slides.length - 1 : j;
+            if (parameter === -1) {
+                slides[j].style.display = "block";
+                createdDots[j].classList.add("activecolor");
+                createdDots[j].backgroundColor = "#fff"
+
+            }
+            
+    }
+    
+
+    </script>
+</body>
+</html>
