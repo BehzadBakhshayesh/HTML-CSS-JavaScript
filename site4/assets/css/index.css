@@ -1,0 +1,621 @@
+/* =========================================================== */
+/* FONTS */
+/* =========================================================== */
+@font-face{
+    font-family:IRANYekanRegularRd ;
+    src: url(../fonts/iranYekan/IRANYekanRegularRd.ttf);
+}
+
+
+/* =========================================================== */
+/* GENERAL */
+/* =========================================================== */
+*{
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+::selection{
+    background:rgba(255,255,101,0.3);
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    font-family:IRANYekanRegularRd,sans-serif ;
+    font-size: 10px;
+}
+header,main,footer{
+    width: 100%;
+}
+ul{
+    list-style: none;
+    margin: 0;
+}
+a{  color: #fff;
+    text-decoration: none;
+}
+button{
+    border: none;
+    font-family:IRANYekanRegularRd,sans-serif ;
+}
+a,button{
+    cursor: pointer;
+}
+a:active{
+    color: #fff;
+}
+a:visited{
+    color: #fff;
+}
+input,select,button{
+    outline: none;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+/* =========================================================== */
+/* HEADER */
+/* =========================================================== */
+header{
+    background-image: url(../images/banner-bg.jpg);
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center center;
+    
+}
+header .innerHeader{
+    max-width: 120rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header .innerHeader .container.right{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+header .innerHeader .right .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+}
+header .innerHeader .right .logo .logoImg{
+    max-width: 25rem;
+}
+header .innerHeader .right h3{
+    padding: 3rem 1rem;
+}
+header .innerHeader .right .social{
+    padding: 2rem;
+    font-size: 2rem;
+}
+header .innerHeader .right .social .socialContainer{
+    transition: background-color ease 0.25s;
+    padding:0 2rem;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.1);
+    margin-bottom: 5px;
+}
+header .innerHeader .right .social .socialContainer a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .innerHeader .right .social .fab{
+    width: 6rem;
+    height: 6rem;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .innerHeader .right .social .socialContainer:hover{
+    background:rgba(255,255,101,0.3);
+    
+}
+header .innerHeader .right .conectUs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 0; 
+}
+header .innerHeader .right .conectUs .connectBuuton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20rem;
+    height: 6rem;
+    border-radius: 5px;
+    font-size: 1.8rem;
+    font-family:IRANYekanRegularRd,sans-serif ;
+    color: #555;
+    background-color: #ffe165
+}
+header .innerHeader .right .conectUs .connectBuuton i{
+    color: #555;
+    padding-left:1rem;
+}
+header .innerHeader .left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .innerHeader .left .formBox{
+    background-color: rgba(255,255,255,0.8);
+    color: #333;
+    padding: 2rem;
+    border-radius: 5px;
+}
+header .innerHeader .left .formBox h4{
+    font-size: 2rem;
+    padding:2rem 1rem;
+}
+header .innerHeader .left .formBox .innerForm{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+header .innerHeader .left .formBox .innerForm .formElement{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 50%;
+    padding: 1rem 0;
+}
+header .innerHeader .left .formBox .innerForm .formElement input[type='radio']{
+    cursor: pointer;
+}
+header .innerHeader .left .formBox .innerForm .formElement>label{
+    flex-basis: 100%;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+header .innerHeader .left .formBox .innerForm .formElement>input,select{
+    width: 90%;
+    padding: 0.5rem 1rem;
+    background-color:rgba(220,220,220,1);
+    color: rgba(100,100,100,1);
+    border: none;
+}
+header .innerHeader .left .formBox .innerForm .radios>div{
+    flex-basis: 50%;
+    font-size: 1.3rem;
+    text-align: center;
+}
+header .innerHeader .left .formBox .innerForm .formElement button{
+    width: 10rem;
+    height: 4rem;
+    color: #666;
+    background-color:rgba(255,255,101,1);
+    border-radius: 4px;
+    
+}
+/* =========================================================== */
+/* MAIN */
+/* =========================================================== */
+main .innerMain{
+    max-width: 120rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+main .innerMain .weather{ 
+    width: 100%;
+      
+}
+main .innerMain .weather h3{
+    color: #444;
+    text-align: center;
+} 
+main .innerMain .weather .days ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+main .innerMain .weather .days ul li{
+    flex-basis: 20%;
+    flex: 1;
+    font-size: 2rem;
+    background-color: rgba(31,54,70,1) ;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 0;
+    margin-bottom: 0.5rem;
+}
+main .innerMain .weather .days ul li.active{
+    background-color: rgba(255,255,101,1);
+    color: #333;
+    transition: all ease 0.5s;
+}
+
+main .innerMain .weather .weatherContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../images/weather-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+main .innerMain .weather .weatherContainer .item{
+    text-align: center;
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+main .innerMain .weather .weatherContainer .item>div{
+    font-size: 2.5rem;
+}
+main .innerMain .weather .weatherContainer .item .iconW{
+    font-size: 5rem;
+}
+main .innerMain .weather .weatherContainer .item .Temperature{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255,255,255,0.6);
+    font-size: 1.2rem;
+    color: #444;
+}
+main .innerMain .weather .weatherContainer .item .Temperature>div{
+    font-weight: bold;
+}
+main .innerMain .weather .weatherContainer .item .Temperature>div>div{
+    background-color: rgba(255,255,255,0.7);
+}
+
+main .innerMain .services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .innerMain .services .service{
+    text-align: center;
+    background-color:rgba(31,54,70,1) ;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 5rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all ease 0.25s;
+}
+main .innerMain .services .service:hover{
+    background-color: rgba(255,255,101,1);
+    color: #333;
+}
+main .innerMain .services .service .icon{
+    font-size: 5rem;
+    margin: auto;
+
+}
+main .innerMain .services .service h4{
+    margin: 3rem auto;
+    font-size: 2rem;
+}
+
+/* =========================================================== */
+/* TAB*/
+/* =========================================================== */
+.tab{
+    width: 100%;
+    background-color: rgba(244,244,244,1);
+}
+.tab .innerTab{
+    max-width: 120rem;
+    margin: auto;
+    padding:2rem 5rem;
+}
+.tab .innerTab h3{
+    text-align: center;
+    font-size: 3rem;
+    padding: 3rem 0;
+    color: #444;
+}
+
+.tab .innerTab .tabsContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.tab .innerTab .tabsContent .tabList ul{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.tab .innerTab .tabsContent .tabList .tabListItem{
+    padding-right: 2.5rem;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+    background-color:rgba(31,54,70,1);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tab .innerTab .tabsContent .tabList .tabListItem.activlist{
+    background-color: rgba(255,255,101,1);
+    color: #333;
+    transition: all ease 0.5s;
+}
+.tab .innerTab .tabsContent .tabList .tabListItem .fa{
+    font-size: 3rem;
+    padding: 1.5rem 2rem;  
+    background-color: rgba(255,255,255,0.2);
+}
+.tab .innerTab .tabsContent .tabContainer{
+    flex-basis: 66%;
+    height: 400px;
+}
+.tab .innerTab .tabsContent .tabContainer .tabContainerItem{
+    display: none;
+    position: relative;
+}
+.tab .innerTab .tabsContent .tabContainer .tabContainerItem.activeTab{
+    display: flex;
+}
+.tab .innerTab .tabsContent .tabContainer .tabContainerItem .textContent{
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7rem;
+    padding: 1rem 4rem;
+    color: #fff;
+    background-color:rgba(31,54,70,0.9);
+}
+.tab .innerTab .tabsContent .tabContainer .tabContainerItem .textContent h4{
+    font-size: 1.5rem;
+}
+.tab .innerTab .tabsContent .tabContainer .tabContainerItem .textContent p{
+    font-size: 1.2rem;
+}
+
+/* =========================================================== */
+/* MEDIA SCREEN */
+/* =========================================================== */
+
+@media screen and (max-width:370px){
+/* HEADER============= */
+    header .innerHeader .container{
+        flex-basis: 100%;
+    }
+    header .innerHeader .right h3{
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+    header .innerHeader .right .social{
+        padding: 2rem 0;
+        font-size: 1.5rem;
+    }
+    header .innerHeader .left{
+        padding: 5rem 0.5rem;
+    }
+    header .innerHeader .left .formBox{
+        flex-basis: 90%;
+    }
+    header .innerHeader .left .formBox .innerForm .formElement{
+        flex-basis: 100%;
+    }
+/* MAIN============= */
+main .innerMain .weather{ 
+    padding: 0 1rem;
+}
+    main .innerMain .weather h3{
+        margin: 3rem 0;
+        font-size: 1.7rem;
+    }
+    main .innerMain .weather .days ul li{
+        flex-basis: 100%; 
+    }
+    main .innerMain .weather .weatherContainer{
+       padding: 0.5rem;
+    }
+    main .innerMain .weather .weatherContainer .item{
+        flex-basis: 100%;
+        margin: 2rem auto 0;
+        padding: 1.75rem;
+    }
+    
+    main .innerMain .weather .weatherContainer .item>div{
+        padding: 1rem 0;
+    }
+    main .innerMain .services{
+        padding: 1rem;
+        margin: 7rem auto;
+    }
+    main .innerMain .services .service{
+        flex-basis: 100%;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+/* TAB============= */
+    .tab .innerTab{ 
+        padding:1rem;
+    }
+    .tab .innerTab .tabsContent .tabList{
+        flex-basis: 100%;
+    }
+    .tab .innerTab .tabsContent .tabContainer{
+        flex-basis: 100%;
+    }
+    .tab .innerTab .tabsContent .tabContainer .tabContainerItem .textContent{
+        height: 5rem;
+        padding: 0.5rem 3rem;
+    }
+    .tab .innerTab .tabsContent .tabContainer .tabContainerItem .textContent h4{
+       font-size: 1rem;
+    }
+    .tab .innerTab .tabsContent .tabContainer .tabContainerItem .textContent p{
+        font-size: 1rem;
+     }
+      
+}
+@media screen and (min-width:370px){
+/* HEADER============= */
+    header .innerHeader .container{
+        flex-basis: 100%;
+    }
+    header .innerHeader .right h3{
+        font-size: 2.5rem;
+    }
+    header .innerHeader .left{
+        padding: 5rem 0.5rem;
+    }
+    header .innerHeader .left .formBox{
+        flex-basis: 90%;
+    }
+    header .innerHeader .left .formBox .innerForm .formElement{
+        flex-basis: 100%;
+    }
+/* MAIN============= */
+
+    main .innerMain .weather{ 
+        padding: 0 3rem;
+    }
+    main .innerMain .weather h3{
+        margin: 5rem 0;
+        font-size: 2rem;
+    }
+    main .innerMain .weather .days ul li{
+        flex-basis: 100%;
+       
+    }
+    main .innerMain .weather .weatherContainer{
+        padding: 2rem;
+    }
+    main .innerMain .weather .weatherContainer .item{
+        flex-basis: 100%;
+        margin: 3rem auto 0;
+        padding: 3rem;
+    }
+ 
+    main .innerMain .weather .weatherContainer .item>div{
+        padding: 2rem 0;
+    }
+    main .innerMain .services{
+        padding: 3rem;
+        margin: 7rem auto 0;
+    }
+    main .innerMain .services .service{
+        flex-basis: 100%;
+        margin-bottom: 3rem;
+        padding: 2rem;
+    }
+/* TAB============= */
+    .tab .innerTab{
+        padding:1rem 3rem;
+    }
+    .tab .innerTab .tabsContent .tabList{
+        flex-basis: 100%;
+    }
+    .tab .innerTab .tabsContent .tabContainer{
+        flex-basis: 100%;
+    }
+}
+@media screen and (min-width:576px){
+/* HEADER============= */
+    header .innerHeader .left{
+        padding: 5rem 0.5rem;
+    }
+    header .innerHeader .right h3{
+        font-size: 3rem;
+    }
+/* MAIN============= */
+main .innerMain .weather .weatherContainer{
+    padding: 4rem;
+}
+/* TAB============= */
+}
+@media screen and (min-width:768px){
+/* HEADER============= */
+/* MAIN=============== */
+    main .innerMain .weather{ 
+        padding: 0 5rem;
+    }
+    main .innerMain .services{
+     padding: 5rem;
+    }
+    main .innerMain .services .service{
+        padding: 4rem;
+    }
+/* TAB============= */
+    .tab .innerTab{
+        padding:1rem 5rem;
+    }
+}
+@media screen and (min-width:980px){
+/* HEADER============= */
+    header .innerHeader .container{
+        flex-basis: 50%;
+    }
+    header .innerHeader .left{
+        padding:0;
+    }
+    header .innerHeader .left .formBox{
+        flex-basis: 70%;
+    }
+    header .innerHeader .left .formBox .innerForm .formElement{
+        flex-basis: 50%;
+    }
+/* MAIN============= */
+
+    main .innerMain .weather h3{
+        margin: 7rem 0;
+        font-size: 3rem;
+    }
+    main .innerMain .weather .days ul li{
+    flex-basis: 20%;
+    }
+    main .innerMain .weather .weatherContainer .item{
+        flex-basis: 30%;
+        margin: 2rem auto;
+    }
+
+    main .innerMain .weather .weatherContainer .item>div{
+        padding: 2rem 0;
+    }
+    main .innerMain .services .service{
+        flex-basis: 30%;
+    }
+    main .innerMain .services{
+        padding: 5rem;
+    }
+    main .innerMain .services .service{
+        flex-basis: 30%;
+        margin-bottom: 5rem;
+    }
+/* TAB============= */
+.tab .innerTab .tabsContent .tabList{
+    flex-basis: 33%;
+}
+.tab .innerTab .tabsContent .tabContainer{
+    flex-basis: 66%;
+}
+   
+    
+}
+@media screen and (min-width:1200px){}
