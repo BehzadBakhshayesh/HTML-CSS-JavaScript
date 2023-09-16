@@ -17,16 +17,15 @@
     <script>
         const links = document.querySelectorAll("a")
 
-        links.forEach((link)=>{
-            link.addEventListener("click", (e) =>{ 
-            e.preventDefault()
-            alert( new Date());
-            alert( e.target.href);
-            location.replace(e.target.href);
+        links.forEach((link) => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault()
+                alert(new Date());
+                alert(e.target.href);
+                location.replace(e.target.href);
+            })
         })
-        })
-
-       
+        
     </script>
 
 </body>
