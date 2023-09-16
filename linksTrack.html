@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a href="/a.html" id="link">aaaaaaaaaaa</a>
+    <a href="/b" id="link">bbbbbbbbb</a>
+    <a href="/c" id="link">ccccccccc</a>
+    <a href="/d" id="link">dddddddddd</a>
+
+    <script>
+        const links = document.querySelectorAll("a")
+
+        links.forEach((link)=>{
+            link.addEventListener("click", (e) =>{ 
+            e.preventDefault()
+            alert( new Date());
+            alert( e.target.href);
+            location.replace(e.target.href);
+        })
+        })
+
+       
+    </script>
+
+</body>
+
+</html>
